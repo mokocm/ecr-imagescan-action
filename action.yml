@@ -1,0 +1,6 @@
+name: "ECR Image Scan Action"
+description: "ECR Image Scan Action"
+inputs:
+
+runs:
+

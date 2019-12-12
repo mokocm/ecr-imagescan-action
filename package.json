@@ -2,9 +2,9 @@
   "name": "ecr-imagescan-action",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,33 @@
   "dependencies": {
     "@actions/core": "^1.2.0",
     "aws-sdk": "^2.588.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.17",
+    "jest": "^24.9.0",
+    "prettier": "1.19.1",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    }
   }
 }
