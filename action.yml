@@ -1,6 +1,21 @@
 name: "ECR Image Scan Action"
 description: "ECR Image Scan Action"
 inputs:
+  image-digest:
+    description: Image Digest
+    required: true
+  image-tag:
+    description: Image Tag
+    required: true
+  repository-name:
+    description: RepositoryName
+    required: true
+  trigger-severity:
+    description: INFORMATIONAL | LOW | MEDIUM | HIGH | CRITICAL
+    required: true
+
 
 runs:
+  using: node12
+  main: "dist/index.js"
 
