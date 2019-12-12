@@ -1,6 +1,6 @@
 import AWS from "aws-sdk"
 
-const ecr = new AWS.ECR({ region: "ap-northeast-1" })
+const ecr = new AWS.ECR()
 const core = require("@actions/core")
 
 const ECR_IMAGESCAN_WAIT_SEC: number = 10

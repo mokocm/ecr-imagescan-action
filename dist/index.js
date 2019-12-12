@@ -13,9 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const aws_sdk_1 = __importDefault(require("aws-sdk"));
-var credentials = new aws_sdk_1.default.SharedIniFileCredentials({ profile: "test-admin" });
-aws_sdk_1.default.config.credentials = credentials;
-const ecr = new aws_sdk_1.default.ECR({ region: "ap-northeast-1" });
+const ecr = new aws_sdk_1.default.ECR();
 const core = require("@actions/core");
 const ECR_IMAGESCAN_WAIT_SEC = 10;
 const sleep = (waitSecounds) => new Promise(resolve => setTimeout(resolve, waitSecounds * 1000));
