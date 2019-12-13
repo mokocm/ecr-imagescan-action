@@ -41,12 +41,12 @@ function main() {
             };
             // start Image Scan
             const startImageScan = yield ecr.startImageScan(imageParams).promise();
-            core.info(startImageScan);
+            core.info(JSON.stringify(startImageScan));
             console.log(startImageScan);
             while (true) {
                 yield sleep(ECR_IMAGESCAN_WAIT_SEC);
                 const imageScanResult = yield ecr.describeImageScanFindings(imageParams).promise();
-                core.info(imageScanResult);
+                core.info(JSON.stringify(imageScanResult));
                 console.log(imageScanResult);
                 if (((_a = imageScanResult.imageScanStatus) === null || _a === void 0 ? void 0 : _a.status) === "FAILED") {
                     throw new Error(`ImageScanResult FAILED.  ${imageScanResult.imageScanStatus.description}`);
