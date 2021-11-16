@@ -19,7 +19,7 @@
   "homepage": "https://github.com/mokocm/ecr-imagescan-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.0",
-    "aws-sdk": "^2.588.0"
+    "aws-sdk": "^2.814.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
